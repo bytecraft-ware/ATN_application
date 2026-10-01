@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Подать заявку</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5eee7;
+            color: #2d1b12;
+        }
+
+        header {
+            padding: 25px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 21px;
+            font-weight: 800;
+            letter-spacing: 2px;
+        }
+
+        .top-btn {
+            text-decoration: none;
+            color: white;
+            background: #60402e;
+            padding: 12px 20px;
+            border-radius: 30px;
+        }
+
+        .hero {
+            min-height: 90vh;
+            padding: 60px 7%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 70px;
+        }
+
+        .left {
+            max-width: 650px;
+        }
+
+        .small {
+            color: #8a6249;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 13px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: clamp(50px, 7vw, 90px);
+            line-height: .95;
+            letter-spacing: -4px;
+        }
+
+        h1 span {
+            color: #765039;
+        }
+
+        .description {
+            margin-top: 30px;
+            color: #766257;
+            font-size: 18px;
+            line-height: 1.7;
+            max-width: 550px;
+        }
+
+        .tags {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 50px;
+        }
+
+        .tag {
+            padding: 11px 15px;
+            border: 1px solid #d8c7b8;
+            border-radius: 12px;
+            font-size: 20px;
+        }
+
+        .form-card {
+            width: 430px;
+            max-width: 100%;
+            background: #fffaf6;
+            padding: 35px;
+            border-radius: 25px;
+            box-shadow: 0 25px 70px rgba(60, 38, 26, .16);
+        }
+
+        .form-card h2 {
+            font-size: 28px;
+            margin-bottom: 7px;
+        }
+
+        .subtitle {
+            color: #8d796d;
+            font-size: 14px;
+            margin-bottom: 25px;
+        }
+
+        .group {
+            margin-bottom: 16px;
+        }
+
+        label {
+            display: block;
+            font-size: 13px;
+            font-weight: bold;
+            margin-bottom: 7px;
+        }
+
+        input,
+        textarea,
+        select {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid #ded0c5;
+            border-radius: 12px;
+            background: white;
+            font-size: 14px;
+            outline: none;
+        }
+
+        textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        input:focus,
+        textarea:focus,
+        select:focus {
+            border-color: #80563e;
+            box-shadow: 0 0 0 4px rgba(128, 86, 62, .1);
+        }
+
+        button {
+            width: 100%;
+            border: none;
+            padding: 16px;
+            background: #60402e;
+            color: white;
+            border-radius: 12px;
+            font-size: 15px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: .2s;
+        }
+
+        button:hover {
+            background: #39251b;
+            transform: translateY(-2px);
+        }
+
+        button:disabled {
+            opacity: .6;
+            cursor: not-allowed;
+        }
+
+        #result {
+            display: none;
+            margin-top: 15px;
+            padding: 13px;
+            border-radius: 11px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .success {
+            background: #e7f3e5;
+            color: #315d32;
+        }
+
+        .error {
+            background: #f8e3df;
+            color: #87362b;
+        }
+
+        .privacy {
+            color: #9b897d;
+            font-size: 11px;
+            text-align: center;
+            margin-top: 12px;
+        }
+
+        @media (max-width: 850px) {
+            .hero {
+                flex-direction: column;
+                align-items: stretch;
+                padding: 30px 5%;
+            }
+
+            header {
+                padding: 20px 5%;
+            }
+
+            h1 {
+                font-size: 55px;
+            }
+
+            .form-card {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">ALMA TEEN NETWORK</div>
+
+    <a href="#application" class="top-btn">
+        Подать заявку
+    </a>
+</header>
+
+
+<section class="hero">
+
+    <div class="left">
+
+        <div class="small">
+            Application · 2026
+        </div>
+
+        <h1>
+            Подай свою<br>
+            <span>заявку в ATN.</span>
+        </h1>
+
+        <p class="description">
+            Заполни небольшую анкету. После отправки
+            твоя заявка автоматически поступит организатору
+            в Telegram.
+        </p>
+
+        <div class="tags">
+            <div class="tag">Главная
+Teen Networking Club
+Сообщество подростков, которые хотят знакомиться, развиваться и создавать проекты вместе
+13–16 лет
+• Алматы 
+• проекты 
+• общение 
+• возможности
+
+О клубе
+Мы объединяем подростков 13–16 лет, которым интересно развитие, проекты и новые знакомств.
+</div>
+            <div class="tag">В клубе можно:
+найти единомышленников и команду;
+участвовать в собственных проектах;
+развивать лидерские и коммуникационные навыки;
+узнавать о конкурсах, олимпиадах и других возможностях;
+делиться идеями и помогать друг другу.</div>
+            <div class="tag">•Проекты — создаём собственные инициативы в команде.
+•Нетворкинг — знакомимся с активными ребятами.
+•Развитие — учимся новым навыкам через практику.
+•Возможности — ищем конкурсы, мероприятия и программы для
+подростков
+Кто может вступить? 
+Любой подросток 13-16 лет, которому интересно развиваться, общаться и участвовать в проектах. Опыт не обязателен.
+
+
+
+Хочешь присоединиться?
+Заполни короткую анкету и стань частью клуба!</div>
+        </div>
+
+    </div>
+
+
+    <div class="form-card" id="form">
+
+        <h2>Анкета</h2>
+
+        <p class="subtitle">
+            Заполни все необходимые поля
+        </p>
+
+        <form id="form">
+
+            <div class="group">
+                <label>Имя *</label>
+                <input
+                    type="text"
+                    name="name"
+                    placeholder="Введите имя"
+                    required
+                >
+            </div>
+
+            <div class="group">
+                <label>Email *</label>
+                <input
+                    type="email"
+                    name="email"
+                    placeholder="example@gmail.com"
+                    required
+                >
+            </div>
+
+            <div class="group">
+                <label>Telegram</label>
+                <input
+                    type="text"
+                    name="telegram"
+                    placeholder="@username"
+                >
+            </div>
+
+            <div class="group">
+                <label>Возраст</label>
+                <input
+                    type="number"
+                    name="age"
+                    placeholder="Ваш возраст"
+                >
+            </div>
+
+            <div class="group">
+                <label>Направление</label>
+
+                <input
+                    type="text"
+                    name="direction"
+                    placeholder="Напиши о том направлении с которым будешь заниматся "
+                >
+            </div>
+
+            <div class="group">
+                <label>О себе</label>
+
+                <textarea
+                    name="message"
+                    placeholder="Расскажите немного о себе..."
+                ></textarea>
+            </div>
+
+            <button id="submit" type="submit">
+                Отправить заявку →
+            </button>
+
+            <div id="result"></div>
+
+            <div class="privacy">
+                После отправки данные будут переданы организатору
+                через Telegram.
+            </div>
+
+        </form>
+
+    </div>
+
+</section>
+
+<script src="script.js"></script>
+
+       
